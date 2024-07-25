@@ -6,7 +6,7 @@ RUN apt-get update && \
     libicu-dev \
     curl \
     ftp \
-    zip \ 
+    zip \
     unzip \
     dotnet-runtime-6.0 && \
     apt-get clean && \
