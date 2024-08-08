@@ -8,6 +8,8 @@ RUN apt-get update && \
     ftp \
     zip \
     unzip \
+    libreoffice \
+    ghostscript \
     dotnet-runtime-6.0 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -24,7 +26,7 @@ RUN mkdir /home/gitaction/actions-runner && \
     tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz && \
     cd /home/gitaction/actions-runner/bin && \
     chmod 755 ./installdependencies.sh && \
-    ./installdependencies.sh
+    ./installdependencies.sh 
 
 RUN chown gitaction /home/gitaction/actions-runner -R
 
